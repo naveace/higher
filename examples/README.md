@@ -4,7 +4,7 @@ This directory presents concise examples of using `higher`
 to re-implement techniques that use unrolled gradients.
 
 ## Model Agnostic Meta Learning (MAML)
-[./maml-omniglot.py](./maml-omniglot.py)
+[./maml-omniglot.py](maml-omniglot.py)
 does few-shot Omniglot classification with MAML.
 For more details see [the original MAML paper](https://arxiv.org/abs/1703.03400).
 

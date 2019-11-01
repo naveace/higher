@@ -1,4 +1,4 @@
-![higher logo](./resources/higher_logo_banner.png)
+![higher logo](resources/higher_logo_banner.png)
 --------------------------------------------------------------------------------
 
 `higher` is a library providing support for higher-order optimization, e.g. through unrolled first-order optimization loops, of "meta" aspects of these loops. It provides tools for turning existing `torch.nn.Module` instances "stateless", meaning that changes to the parameters thereof can be tracked, and gradient with regard to intermediate parameters can be taken. It also provides a suite of differentiable optimizers, to facilitate the implementation of various meta-learning approaches.
@@ -153,7 +153,7 @@ It is possible to use optimizers other that those found in `torch.optim`. A diff
 You can find examples of how to test for gradient correctness using finite difference methods in `tests/test_optim.py`. Please note that some stability tricks may be needed to avoid `nan`s in the gradients. See the `higher.optim.DifferentiableAdam` implementation for examples of mitigation strategies, e.g. identify operations that yield exploding gradients, e.g. typically those taking the square roots of moving averages (which are intially zero), and register a backward hook using `x.register_hook` on the inputs `x` to those functions, using the helper function `_get_mask_closure` from `higher.optim`.
 
 # Release Notes
-See the [changelog](./CHANGELOG.md) for release notes.
+See the [changelog](CHANGELOG.md) for release notes.
 
 # Known/Possible Issues
 * See the [issues tracker](https://github.com/facebookresearch/higher/issues) for an up-to-date list.

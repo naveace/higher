@@ -12,12 +12,8 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-from . import patch  # noqa: F401
 from . import optim  # noqa: F401
-from . import utils  # noqa: F401
 
-from .optim import get_diff_optim, create_diff_optim  # noqa: F401
-from .optim import register_optim  # noqa: F401
 from .patch import monkeypatch
 
 from contextlib import contextmanager as _contextmanager
